@@ -1,0 +1,26 @@
+<annotation>
+	<filename>1.jpg</filename>
+	<size>
+		<width>500</width>
+		<height>375</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>person</name>
+		<bndbox>
+			<xmin>135</xmin>
+			<ymin>25</ymin>
+			<xmax>236</xmax>
+			<ymax>188</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bicycle</name>
+		<bndbox>
+			<xmin>95</xmin>
+			<ymin>85</ymin>
+			<xmax>232</xmax>
+			<ymax>253</ymax>
+		</bndbox>
+	</object>
+</annotation>
