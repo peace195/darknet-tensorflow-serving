@@ -44,3 +44,5 @@ ckpt/*
 
 #pytest cache
 .cache/
+
+.idea
