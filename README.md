@@ -17,7 +17,7 @@ Build model to .pb file:
 * input: image directory
 * output: 13 x 13 x 30 matrix
 ### Client
-    python3 darkflow_client.py
+    python3 client.py
 
 Generate bounding boxes from above 13 x 13 x 30 matrix using cython codes https://github.com/thtrieu/darkflow/tree/master/darkflow/cython_utils
 ## Intro
