@@ -1,12 +1,15 @@
 ## How to run tf serving
 ### Server
     docker pull tensorflow/serving
-    docker run -p 8501:8501 -v /pathtorepo/darkflow/built_graph/:/models/darkflow -e MODEL_NAME=darkflow -t tensorflow/serving & 
+    docker run -p 8501:8501 -v /pathtorepository/built_graph/:/models/darkflow -e MODEL_NAME=darkflow -t tensorflow/serving & 
     http://localhost:8501/v1/models/darkflow:predict
-
+    
+* input: image directory
+* output: 13 x 13 x 30 matrix
 ### Client
     python3 darkflow_client.py
 
+Generate bounding boxes from above 13 x 13 x 30 matrix using cython codes https://github.com/thtrieu/darkflow/tree/master/darkflow/cython_utils
 ## Intro
 
 [![Build Status](https://travis-ci.org/thtrieu/darkflow.svg?branch=master)](https://travis-ci.org/thtrieu/darkflow) [![codecov](https://codecov.io/gh/thtrieu/darkflow/branch/master/graph/badge.svg)](https://codecov.io/gh/thtrieu/darkflow)
