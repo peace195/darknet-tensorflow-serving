@@ -1,4 +1,12 @@
 ## How to run tf serving
+
+### Build model
+* Train model
+    flow --model cfg/tiny-yolo-test.cfg --train --dataset "~/VOCdevkit/VOC2007/JPEGImages" --annotation "~/VOCdevkit/VOC2007/Annotations"
+
+* Build model to .pb file:
+    flow --model cfg/tiny-yolo-test.cfg --load -1 --savepb
+
 ### Server
     docker pull tensorflow/serving
     docker run -p 8501:8501 -v /pathtorepository/built_graph/:/models/darkflow -e MODEL_NAME=darkflow -t tensorflow/serving & 
