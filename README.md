@@ -1,9 +1,13 @@
 ## How to run tf serving
 
 ### Build model
+Get data
+
+    python3 json2xml.py
+    
 Train model
 
-    flow --model cfg/tiny-yolo-test.cfg --train --dataset "~/VOCdevkit/VOC2007/JPEGImages" --annotation "~/VOCdevkit/VOC2007/Annotations"
+    flow --model cfg/tiny-yolo-test.cfg --train --dataset "./data/images" --annotation "./data/annotations"
 
 Build model to .pb file:
 
