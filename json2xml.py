@@ -59,5 +59,8 @@ for i, obj in enumerate(collection.find()):
         cnt += 1
 
 
+for label in set(labels):
+    f_label.write(label)
+    f_label.write("\n")
 
 f_label.close()
