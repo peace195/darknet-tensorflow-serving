@@ -1,29 +1,29 @@
-## How to run tf serving
+## How to run darkflow tensorflow serving
 
-### Build model
-Get data
+### 1. Build model
+Get data from UAT mongodb 
 
     python3 json2xml.py
     
-Train model
+Train model with these data
 
     flow --model cfg/tiny-yolo-test.cfg --train --dataset "./data/images" --annotation "./data/annotations"
 
-Build model to .pb file:
+Export model to .pb format for tensorflow serving
 
     flow --model cfg/tiny-yolo-test.cfg --load -1 --savepb
 
-### Server
+### 2. Start server
     docker pull tensorflow/serving
-    docker run -p 8501:8501 -v /pathtorepository/built_graph/:/models/darkflow -e MODEL_NAME=darkflow -t tensorflow/serving & 
+    docker run -p 8501:8501 -v /path_to_repository/built_graph/:/models/darkflow -e MODEL_NAME=darkflow -t tensorflow/serving & 
     http://localhost:8501/v1/models/darkflow:predict
     
 * input: image directory
-* output: 13 x 13 x 30 matrix
-### Test client
+* output: 13 x 13 x 50 matrix (5 labels)
+### 3. Client side
     python3 client.py
 
-Generate bounding boxes from above 13 x 13 x 30 matrix using cython codes https://github.com/thtrieu/darkflow/tree/master/darkflow/cython_utils
+Generate bounding boxes from above 13 x 13 x 50 matrix using cython codes https://github.com/thtrieu/darkflow/tree/master/darkflow/cython_utils
 ## Intro
 
 [![Build Status](https://travis-ci.org/thtrieu/darkflow.svg?branch=master)](https://travis-ci.org/thtrieu/darkflow) [![codecov](https://codecov.io/gh/thtrieu/darkflow/branch/master/graph/badge.svg)](https://codecov.io/gh/thtrieu/darkflow)

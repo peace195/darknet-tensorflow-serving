@@ -58,7 +58,6 @@ for i, obj in enumerate(collection.find()):
         tree.write(ANNOTATION_DIR + str(cnt) + ".xml")
         cnt += 1
 
-
 for label in set(labels):
     f_label.write(label)
     f_label.write("\n")
