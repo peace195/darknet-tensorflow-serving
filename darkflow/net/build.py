@@ -155,45 +155,23 @@ class TFNet(object):
 			self.writer.add_graph(self.sess.graph)
 
 	def savepb(self):
-		"""
-		Create a standalone const graph def that 
-		C++	can load and run.
-		"""
-		darknet_pb = self.to_darknet()
-		flags_pb = self.FLAGS
-		flags_pb.verbalise = False
-		
-		flags_pb.train = False
-		# rebuild another tfnet. all const.
-		tfnet_pb = TFNet(flags_pb, darknet_pb)		
-		tfnet_pb.sess = tf.Session(graph = tfnet_pb.graph)
-		# tfnet_pb.predict() # uncomment for unit testing
-		name = "built_graph/1"
-		os.makedirs(os.path.dirname(name), exist_ok=True)
-
-		# with open('built_graph/{}.meta'.format(self.meta['name']), 'w') as fp:
-		# 	json.dump(self.meta, fp)
-		# self.say('Saving const graph def to {}'.format(name))
-		# graph_def = tfnet_pb.sess.graph_def
-		# tf.train.write_graph(graph_def,'./', name, False)
-		with tfnet_pb.sess.graph.as_default():
-			x_op = tfnet_pb.sess.graph.get_operation_by_name("input")
+		with self.sess.graph.as_default():
+			x_op = self.sess.graph.get_operation_by_name("input")
 			x = x_op.outputs[0]
-			pred_op = tfnet_pb.sess.graph.get_operation_by_name("output")
+			pred_op = self.sess.graph.get_operation_by_name("output")
 			pred = pred_op.outputs[0]
 
-		with tfnet_pb.sess.graph.as_default():
+		with self.sess.graph.as_default():
 			prediction_signature = tf.saved_model.signature_def_utils.build_signature_def(
 				inputs={
 					"input": tf.saved_model.utils.build_tensor_info(x)
 				},
-				# TODO: add meta to output. So that we do not need to config file for client
 				outputs={
 					"output": tf.saved_model.utils.build_tensor_info(pred)
 				},
 				method_name=tf.saved_model.signature_constants.PREDICT_METHOD_NAME
 			)
-			builder = tf.saved_model.builder.SavedModelBuilder(name)
+			builder = tf.saved_model.builder.SavedModelBuilder("built_graph/1")
 			builder.add_meta_graph_and_variables(
 				self.sess, [tf.saved_model.tag_constants.SERVING],
 				signature_def_map={
