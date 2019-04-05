@@ -1,7 +1,7 @@
 ## How to run darkflow tensorflow serving
 
 ### 1. Build model
-- Get data from UAT mongodb 
+- (Optional) Get data from UAT mongodb (change data format from mongodb to darkflow inputs format (.xml))
 
         python3 json2xml.py
     
