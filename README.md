@@ -7,20 +7,20 @@
     
 Train model with these data
 
-        flow --model cfg/tiny-yolo-test.cfg --train --dataset "./data/images" --annotation "./data/annotations"
+    flow --model cfg/tiny-yolo-test.cfg --train --dataset "./data/images" --annotation "./data/annotations"
 
 Export model to .pb format for tensorflow serving
 
-        flow --model cfg/tiny-yolo-test.cfg --load -1 --savepb
+    flow --model cfg/tiny-yolo-test.cfg --load -1 --savepb
 
 ### 2. Test model
 Copy images with their annotations (xml format) to `sample_img` folder. Then test the model with these data
     
-        flow --model cfg/tiny-yolo-test.cfg --load -1 --json
+    flow --model cfg/tiny-yolo-test.cfg --load -1 --json
         
 Look the results at `sample_img/out` folder. Then compute **mAP** score as following
     
-        python evaluation --xml2txt --json2txt
+    python evaluation --xml2txt --json2txt
 
 ### 3. Start server
     docker pull tensorflow/serving
