@@ -1,26 +1,24 @@
 ## How to run darkflow tensorflow serving
 
 ### 1. Build model
-- (Optional) Get data from UAT mongodb (change data format from mongodb to darkflow inputs format (.xml))
+(Optional) Get data from UAT mongodb (change data format from mongodb to darkflow inputs format (.xml))
 
-        python3 json2xml.py
+    python3 json2xml.py
     
-- Train model with these data
+Train model with these data
 
         flow --model cfg/tiny-yolo-test.cfg --train --dataset "./data/images" --annotation "./data/annotations"
 
-- Export model to .pb format for tensorflow serving
+Export model to .pb format for tensorflow serving
 
         flow --model cfg/tiny-yolo-test.cfg --load -1 --savepb
 
 ### 2. Test model
-- Copy images with their annotations (xml format) to `sample_img` folder.
-- Test the model with these data
+Copy images with their annotations (xml format) to `sample_img` folder. Then test the model with these data
     
         flow --model cfg/tiny-yolo-test.cfg --load -1 --json
         
-- Look the results at `sample_img/out` folder
-- Compute **mAP** score
+Look the results at `sample_img/out` folder. Then compute **mAP** score as following
     
         python evaluation --xml2txt --json2txt
 
@@ -30,7 +28,7 @@
     http://localhost:8501/v1/models/darkflow:predict
     
 - input: image directory
-- output: 13 x 13 x 50 matrix (5 labels)
+- output: 13 x 13 x 50 matrix (for 5 labels)
 ### 4. Client side
     python3 client.py
 
