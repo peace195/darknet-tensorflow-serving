@@ -1,26 +1,37 @@
 ## How to run darkflow tensorflow serving
 
 ### 1. Build model
-Get data from UAT mongodb 
+- Get data from UAT mongodb 
 
-    python3 json2xml.py
+        python3 json2xml.py
     
-Train model with these data
+- Train model with these data
 
-    flow --model cfg/tiny-yolo-test.cfg --train --dataset "./data/images" --annotation "./data/annotations"
+        flow --model cfg/tiny-yolo-test.cfg --train --dataset "./data/images" --annotation "./data/annotations"
 
-Export model to .pb format for tensorflow serving
+- Export model to .pb format for tensorflow serving
 
-    flow --model cfg/tiny-yolo-test.cfg --load -1 --savepb
+        flow --model cfg/tiny-yolo-test.cfg --load -1 --savepb
 
-### 2. Start server
+### 2. Test model
+- Copy images with their annotations (xml format) to `sample_img` folder.
+- Test the model with these data
+    
+        flow --model cfg/tiny-yolo-test.cfg --load -1 --json
+        
+- Look the results at `sample_img/out` folder
+- Compute **mAP** score
+    
+        python evaluation --xml2txt --json2txt
+
+### 3. Start server
     docker pull tensorflow/serving
     docker run -p 8501:8501 -v /path_to_repository/built_graph/:/models/darkflow -e MODEL_NAME=darkflow -t tensorflow/serving & 
     http://localhost:8501/v1/models/darkflow:predict
     
-* input: image directory
-* output: 13 x 13 x 50 matrix (5 labels)
-### 3. Client side
+- input: image directory
+- output: 13 x 13 x 50 matrix (5 labels)
+### 4. Client side
     python3 client.py
 
 Generate bounding boxes from above 13 x 13 x 50 matrix using cython codes https://github.com/thtrieu/darkflow/tree/master/darkflow/cython_utils
