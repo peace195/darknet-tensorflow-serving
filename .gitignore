@@ -16,9 +16,7 @@ test/*.jpg
 test/out/*
 
 # Train image data
-data/*.jpg
-!data/sample_*.jpg
-data/out/*
+data/
 
 # Annotated test results
 results/

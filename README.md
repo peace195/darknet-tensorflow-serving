@@ -14,11 +14,11 @@ Export model to .pb format for tensorflow serving
     flow --model cfg/tiny-yolo-test.cfg --load -1 --savepb
 
 ### 2. Test model
-Copy images with their annotations (xml format) to `sample_img` folder. Then test the model with these data
+Copy images with their annotations (xml format) to `test` folder. Then test the model with these data
     
     flow --model cfg/tiny-yolo-test.cfg --load -1 --imgdir test --json
         
-Look the results at `sample_img/out` folder. Then compute **mAP** score as following
+Look the results at `test/out` folder. Then compute **mAP** score as following
     
     python evaluation.py --xml2txt --json2txt
 
