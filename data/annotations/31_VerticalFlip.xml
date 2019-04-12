@@ -1,0 +1,1 @@
+<annotation><filename>31_VerticalFlip.jpg</filename><size><width>1200</width><height>1200</height><depth>3</depth></size><object><name>Aukey</name><bndbox><xmin>432</xmin><ymin>359</ymin><xmax>646</xmax><ymax>536</ymax></bndbox></object><object><name>Aukey</name><bndbox><xmin>120</xmin><ymin>762</ymin><xmax>265</xmax><ymax>909</ymax></bndbox></object></annotation>

@@ -47,10 +47,10 @@ if args.set_class_iou is not None:
 # make sure that the cwd() is the location of the python script (so that every path makes sense)
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-GT_PATH = os.path.join(os.getcwd(), 'sample_img')
-DR_PATH = os.path.join(os.getcwd(), 'sample_img/out')
+GT_PATH = os.path.join(os.getcwd(), 'test')
+DR_PATH = os.path.join(os.getcwd(), 'test/out')
 # if there are no images then no animation can be shown
-IMG_PATH = os.path.join(os.getcwd(), 'sample_img/images-optional')
+IMG_PATH = os.path.join(os.getcwd(), 'test/images-optional')
 if os.path.exists(IMG_PATH):
     for dirpath, dirnames, files in os.walk(IMG_PATH):
         if not files:

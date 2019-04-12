@@ -10,6 +10,16 @@ sample_img/*.jpg
 !sample_img/sample_*.jpg
 sample_img/out/*
 
+# Test image data
+test/*.jpg
+!test/sample_*.jpg
+test/out/*
+
+# Train image data
+data/*.jpg
+!data/sample_*.jpg
+data/out/*
+
 # Annotated test results
 results/
 

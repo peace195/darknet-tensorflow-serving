@@ -1,0 +1,1 @@
+<annotation><filename>17_HorizontalFlip.jpg</filename><size><width>1200</width><height>1680</height><depth>3</depth></size><object><name>Nike</name><bndbox><xmin>823</xmin><ymin>623</ymin><xmax>1023</xmax><ymax>767</ymax></bndbox></object></annotation>

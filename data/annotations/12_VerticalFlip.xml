@@ -1,0 +1,1 @@
+<annotation><filename>12_VerticalFlip.jpg</filename><size><width>1020</width><height>680</height><depth>3</depth></size><object><name>SAMSUNG</name><bndbox><xmin>337</xmin><ymin>183</ymin><xmax>471</xmax><ymax>310</ymax></bndbox></object><object><name>SAMSUNG</name><bndbox><xmin>636</xmin><ymin>100</ymin><xmax>800</xmax><ymax>238</ymax></bndbox></object></annotation>

@@ -1,0 +1,1 @@
+<annotation><filename>3_VerticalFlip.jpg</filename><size><width>900</width><height>900</height><depth>3</depth></size><object><name>Apple</name><bndbox><xmin>323</xmin><ymin>596</ymin><xmax>676</xmax><ymax>737</ymax></bndbox></object></annotation>

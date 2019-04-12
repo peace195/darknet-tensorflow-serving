@@ -1,5 +1,5 @@
-Xiaomi
-SAMSUNG
-Nike
 Aukey
 Apple
+Nike
+SAMSUNG
+Xiaomi

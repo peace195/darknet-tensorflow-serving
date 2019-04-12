@@ -1,0 +1,1 @@
+<annotation><filename>29_HorizontalFlip.jpg</filename><size><width>1200</width><height>1200</height><depth>3</depth></size><object><name>Aukey</name><bndbox><xmin>921</xmin><ymin>548</ymin><xmax>1049</xmax><ymax>669</ymax></bndbox></object><object><name>Aukey</name><bndbox><xmin>301</xmin><ymin>712</ymin><xmax>619</xmax><ymax>921</ymax></bndbox></object></annotation>

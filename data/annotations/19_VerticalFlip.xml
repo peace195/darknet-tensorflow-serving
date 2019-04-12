@@ -1,0 +1,1 @@
+<annotation><filename>19_VerticalFlip.jpg</filename><size><width>1200</width><height>1200</height><depth>3</depth></size><object><name>Nike</name><bndbox><xmin>524</xmin><ymin>409</ymin><xmax>716</xmax><ymax>588</ymax></bndbox></object><object><name>Nike</name><bndbox><xmin>503</xmin><ymin>122</ymin><xmax>808</xmax><ymax>305</ymax></bndbox></object></annotation>
