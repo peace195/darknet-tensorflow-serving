@@ -1,0 +1,1 @@
+<annotation><filename>680.jpg</filename><size><width>500</width><height>700</height><depth>3</depth></size><object><name>iBasic</name><bndbox><xmin>191</xmin><ymin>508</ymin><xmax>273</xmax><ymax>537</ymax></bndbox></object><object><name>iBasic</name><bndbox><xmin>301</xmin><ymin>508</ymin><xmax>355</xmax><ymax>539</ymax></bndbox></object></annotation>

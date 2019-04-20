@@ -1,0 +1,1 @@
+<annotation><filename>527.jpg</filename><size><width>767</width><height>767</height><depth>3</depth></size><object><name>Nike</name><bndbox><xmin>559</xmin><ymin>268</ymin><xmax>709</xmax><ymax>437</ymax></bndbox></object><object><name>Nike</name><bndbox><xmin>175</xmin><ymin>307</ymin><xmax>384</xmax><ymax>376</ymax></bndbox></object></annotation>

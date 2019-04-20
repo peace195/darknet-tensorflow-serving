@@ -1,0 +1,1 @@
+<annotation><filename>290.jpg</filename><size><width>800</width><height>800</height><depth>3</depth></size><object><name>Calvin Klein</name><bndbox><xmin>115</xmin><ymin>468</ymin><xmax>274</xmax><ymax>512</ymax></bndbox></object><object><name>Calvin Klein</name><bndbox><xmin>543</xmin><ymin>287</ymin><xmax>570</xmax><ymax>386</ymax></bndbox></object></annotation>

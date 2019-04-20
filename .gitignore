@@ -17,9 +17,7 @@ test/out/*
 
 # Train image data
 data/
-
-# Annotated test results
-results/
+train/
 
 # Intermediate training data
 backup/
@@ -53,3 +51,5 @@ ckpt/*
 .cache/
 
 .idea
+toplogo10
+10logo

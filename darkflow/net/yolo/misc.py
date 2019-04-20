@@ -78,9 +78,9 @@ _MVA = .05
 
 def profile(self, net):
     pass
-#     data = self.parse(exclusive = True)
-#     size = len(data); batch = self.FLAGS.batch
-#     all_inp_ = [x[0] for x in data]
+#     train = self.parse(exclusive = True)
+#     size = len(train); batch = self.FLAGS.batch
+#     all_inp_ = [x[0] for x in train]
 #     net.say('Will cycle through {} examples {} times'.format(
 #         len(all_inp_), net.FLAGS.epoch))
 

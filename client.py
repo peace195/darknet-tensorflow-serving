@@ -8,7 +8,7 @@ import json
 # model with the name "resnet" and using the predict interface.
 SERVER_URL = 'http://localhost:8501/v1/models/darkflow:predict'
 # The image URL is the location of the image we should send to the server
-IMAGE_DIR = 'sample_img/0.jpg'
+IMAGE_DIR = 'test/0.jpg'
 options = {"model": 'cfg/tiny-yolo-test.cfg', "threshold": 0.3}
 tfnet = TFNet(options)
 

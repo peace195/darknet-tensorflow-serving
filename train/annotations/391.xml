@@ -1,0 +1,1 @@
+<annotation><filename>391.jpg</filename><size><width>800</width><height>600</height><depth>3</depth></size><object><name>Guess</name><bndbox><xmin>503</xmin><ymin>464</ymin><xmax>613</xmax><ymax>496</ymax></bndbox></object><object><name>Guess</name><bndbox><xmin>507</xmin><ymin>78</ymin><xmax>584</xmax><ymax>103</ymax></bndbox></object></annotation>

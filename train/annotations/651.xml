@@ -1,0 +1,1 @@
+<annotation><filename>651.jpg</filename><size><width>643</width><height>900</height><depth>3</depth></size><object><name>Levi's</name><bndbox><xmin>197</xmin><ymin>375</ymin><xmax>243</xmax><ymax>399</ymax></bndbox></object><object><name>Levi's</name><bndbox><xmin>260</xmin><ymin>500</ymin><xmax>314</xmax><ymax>540</ymax></bndbox></object></annotation>

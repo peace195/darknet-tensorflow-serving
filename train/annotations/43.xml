@@ -1,0 +1,1 @@
+<annotation><filename>43.jpg</filename><size><width>675</width><height>480</height><depth>3</depth></size><object><name>Apple</name><bndbox><xmin>273</xmin><ymin>303</ymin><xmax>332</xmax><ymax>323</ymax></bndbox></object></annotation>
