@@ -1,0 +1,1 @@
+<annotation><filename>219.jpg</filename><size><width>722</width><height>722</height><depth>3</depth></size><object><name>LEGO</name><bndbox><xmin>47</xmin><ymin>113</ymin><xmax>90</xmax><ymax>208</ymax></bndbox></object><object><name>LEGO</name><bndbox><xmin>143</xmin><ymin>129</ymin><xmax>262</xmax><ymax>258</ymax></bndbox></object></annotation>

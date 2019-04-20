@@ -1,1 +1,0 @@
-<annotation><filename>12_HorizontalFlip.jpg</filename><size><width>1020</width><height>680</height><depth>3</depth></size><object><name>SAMSUNG</name><bndbox><xmin>549</xmin><ymin>369</ymin><xmax>683</xmax><ymax>496</ymax></bndbox></object><object><name>SAMSUNG</name><bndbox><xmin>220</xmin><ymin>441</ymin><xmax>384</xmax><ymax>580</ymax></bndbox></object></annotation>

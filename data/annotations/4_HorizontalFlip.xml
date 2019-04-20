@@ -1,1 +1,0 @@
-<annotation><filename>4_HorizontalFlip.jpg</filename><size><width>900</width><height>900</height><depth>3</depth></size><object><name>Apple</name><bndbox><xmin>348</xmin><ymin>392</ymin><xmax>520</xmax><ymax>501</ymax></bndbox></object><object><name>Apple</name><bndbox><xmin>522</xmin><ymin>529</ymin><xmax>666</xmax><ymax>642</ymax></bndbox></object></annotation>

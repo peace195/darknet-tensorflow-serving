@@ -1,0 +1,1 @@
+<annotation><filename>853.jpg</filename><size><width>900</width><height>900</height><depth>3</depth></size><object><name>Hugo Boss</name><bndbox><xmin>575</xmin><ymin>310</ymin><xmax>609</xmax><ymax>575</ymax></bndbox></object><object><name>Hugo Boss</name><bndbox><xmin>305</xmin><ymin>407</ymin><xmax>339</xmax><ymax>691</ymax></bndbox></object></annotation>

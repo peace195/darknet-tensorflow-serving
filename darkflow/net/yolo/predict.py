@@ -51,7 +51,7 @@ def preprocess(self, im, allobj = None):
 	Takes an image, return it as a numpy tensor that is readily
 	to be fed into tfnet. If there is an accompanied annotation (allobj),
 	meaning this preprocessing is serving the train process, then this
-	image will be transformed with random noise to augment training data,
+	image will be transformed with random noise to augment training train,
 	using scale, translation, flipping and recolor. The accompanied
 	parsed annotation (allobj) will also be modified accordingly.
 	"""
