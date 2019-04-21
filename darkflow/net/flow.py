@@ -42,7 +42,7 @@ def train(self):
 
     batches = self.framework.shuffle()
     loss_op = self.framework.loss
-
+    best_mAP = -1
     for i, (x_batch, datum) in enumerate(batches):
         if not i: self.say(train_stats.format(
             self.FLAGS.lr, self.FLAGS.batch,
@@ -76,9 +76,13 @@ def train(self):
 
         ckpt = (i+1) % (self.FLAGS.save // self.FLAGS.batch)
         args = [step_now, profile]
-        predict(self)
-        evaluate(self, self.FLAGS.imgdir, os.path.join(self.FLAGS.imgdir, 'out'), "results_" + str(ckpt) + ".txt")
-        if not ckpt: _save_ckpt(self, *args)
+
+        if not ckpt:
+            predict(self)
+            mAP = evaluate(self, self.FLAGS.imgdir, os.path.join(self.FLAGS.imgdir, 'out'), "results_" + str(ckpt) + ".txt")
+            if mAP > best_mAP:
+                best_mAP = mAP
+                _save_ckpt(self, *args)
 
     if ckpt: _save_ckpt(self, *args)
 
@@ -504,3 +508,4 @@ def evaluate(self, test_dir, ret_dir, results_file_name):
         text += ", fp:" + str(n_det - count_true_positives[class_name]) + ")\n"
         results_file.write(text)
     results_file.close()
+    return mAP
