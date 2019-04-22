@@ -1,1 +1,0 @@
-<annotation><filename>88.jpg</filename><size><width>700</width><height>570</height><depth>3</depth></size><object><name>Kingston</name><bndbox><xmin>199</xmin><ymin>189</ymin><xmax>501</xmax><ymax>271</ymax></bndbox></object><object><name>Kingston</name><bndbox><xmin>404</xmin><ymin>75</ymin><xmax>489</xmax><ymax>160</ymax></bndbox></object></annotation>

@@ -1,1 +1,0 @@
-<annotation><filename>360.jpg</filename><size><width>1000</width><height>1000</height><depth>3</depth></size><object><name>Bosch </name><bndbox><xmin>372</xmin><ymin>680</ymin><xmax>408</xmax><ymax>713</ymax></bndbox></object><object><name>Bosch </name><bndbox><xmin>660</xmin><ymin>879</ymin><xmax>716</xmax><ymax>908</ymax></bndbox></object></annotation>

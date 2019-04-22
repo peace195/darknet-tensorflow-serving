@@ -1,1 +1,0 @@
-<annotation><filename>488.jpg</filename><size><width>1000</width><height>1400</height><depth>3</depth></size><object><name>Rayban</name><bndbox><xmin>75</xmin><ymin>605</ymin><xmax>124</xmax><ymax>642</ymax></bndbox></object><object><name>Rayban</name><bndbox><xmin>652</xmin><ymin>622</ymin><xmax>723</xmax><ymax>670</ymax></bndbox></object></annotation>

@@ -1,1 +1,0 @@
-<annotation><filename>401.jpg</filename><size><width>643</width><height>900</height><depth>3</depth></size><object><name>Puma</name><bndbox><xmin>125</xmin><ymin>360</ymin><xmax>215</xmax><ymax>396</ymax></bndbox></object><object><name>Puma</name><bndbox><xmin>133</xmin><ymin>397</ymin><xmax>185</xmax><ymax>441</ymax></bndbox></object></annotation>
