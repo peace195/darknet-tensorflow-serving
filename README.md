@@ -13,12 +13,14 @@ Export model to .pb format for tensorflow serving
 
     flow --model cfg/tiny-yolo-test.cfg --load -1 --savepb
 
+The results of each checkpoint will be saved in `results` folder with format `results_[checkpoint id].txt`
+
 ### 2. Test model
 Copy images with their annotations (xml format) to `test` folder. Then test the model with these data
     
     flow --model cfg/tiny-yolo-test.cfg --load -1 --imgdir test --json
     
-The results of each checkpoint will be saved in `results` folder with format `results_[checkpoint id].txt`
+The results saved in `results` and `test` folder
           
 ### 3. Start server
     docker pull tensorflow/serving

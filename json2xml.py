@@ -129,6 +129,12 @@ for i, obj in enumerate(collection.find()):
                        img,
                        coors)
 
+            annotations = {'image': img,
+                           'bboxes': coors,
+                           'category_id': [obj["class_id"]] * len(coors)}
+
+            aug = get_aug([VerticalFlip(p=1)])
+            augmented = aug(**annotations)
             '''
             # Data augmentation
             annotations = {'image': img,
@@ -189,3 +195,4 @@ for label in labels:
     f_label.write("\n")
 
 f_label.close()
+print(category_id_to_name.keys())
