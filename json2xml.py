@@ -37,7 +37,7 @@ collection = db['athena-label']
 prefix = "https://salt.tikicdn.com/"
 ANNOTATION_DIR = "./train/annotations/"
 IMAGE_DIR = "./train/images/"
-TEST_DIR = "./test"
+TEST_DIR = "./test/"
 
 f_label = open("labels.txt", "w")
 labels = []
