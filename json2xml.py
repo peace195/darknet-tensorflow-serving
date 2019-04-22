@@ -95,7 +95,7 @@ brand_list = ["Apple", "Kingston", "Adidas", "LEGO", "Calvin Klein",
               "Bosch", "Guess", "Puma", "Gucci", "Rayban", "Nike", "Levi's",
               "Disney", "iBasic", "3M", "Hugo Boss", "Prada"]
 for i, obj in enumerate(collection.find()):
-    if obj["annotation"] and obj["class_name"] in brand_list:
+    if obj["annotation"] and (obj["class_name"].strip() in brand_list):
         try:
             brand_images_count.setdefault(obj["class_name"], 0)
             brand_images_count[obj["class_name"]] += 1
@@ -108,8 +108,7 @@ for i, obj in enumerate(collection.find()):
 
             category_id_to_name[obj["class_id"]] = obj["class_name"]
             url = prefix + create_base_path(obj["image_url"]) + obj["image_url"]
-            if obj["class_name"] not in labels:
-                labels.append(obj["class_name"])
+            labels.append(obj["class_name"])
             img_dir = image_save_dir + str(cnt) + '.jpg'
             with open(img_dir, 'wb') as handle:
                 img = requests.get(url).content
@@ -190,9 +189,8 @@ for i, obj in enumerate(collection.find()):
         except ValueError:
             print(url, obj["annotation"])
 
-for label in labels:
+for label in set(labels):
     f_label.write(label)
     f_label.write("\n")
 
 f_label.close()
-print(category_id_to_name.keys())
