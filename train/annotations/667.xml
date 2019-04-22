@@ -1,1 +1,0 @@
-<annotation><filename>667.jpg</filename><size><width>900</width><height>900</height><depth>3</depth></size><object><name>Disney</name><bndbox><xmin>368</xmin><ymin>590</ymin><xmax>466</xmax><ymax>639</ymax></bndbox></object><object><name>Disney</name><bndbox><xmin>639</xmin><ymin>442</ymin><xmax>706</xmax><ymax>482</ymax></bndbox></object></annotation>

@@ -18,6 +18,9 @@ test/out/*
 # Train image data
 data/
 train/
+train/annotations/*
+train/images/*
+
 
 # Intermediate training data
 backup/
