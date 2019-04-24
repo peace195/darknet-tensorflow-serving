@@ -97,6 +97,9 @@ brand_list = ["Apple", "Kingston", "Adidas", "LEGO", "Calvin Klein",
 for i, obj in enumerate(collection.find()):
     if obj["annotation"] and (obj["class_name"].strip() in brand_list):
         try:
+            if "jpg" not in obj["image_url"] or "png" not in obj["image_url"]:
+                continue
+
             brand_images_count.setdefault(obj["class_name"], 0)
             brand_images_count[obj["class_name"]] += 1
             if brand_images_count[obj["class_name"]] > 20:
@@ -110,15 +113,14 @@ for i, obj in enumerate(collection.find()):
             url = prefix + create_base_path(obj["image_url"]) + obj["image_url"]
             labels.append(obj["class_name"])
             img_dir = image_save_dir + str(cnt) + '.jpg'
+
             with open(img_dir, 'wb') as handle:
                 img = requests.get(url).content
                 handle.write(img)
 
-            if "jpg" not in obj["image_url"]:
-                continue
-
             img = cv2.imread(img_dir)
             height, width, channels = img.shape
+
             coors_tmp = obj["annotation"][0]["values"]
             coors = [[width * coor[0], height * coor[1], width * coor[2], height * coor[3]] for coor in coors_tmp]
 
@@ -187,7 +189,7 @@ for i, obj in enumerate(collection.find()):
             '''
             cnt += 1
         except ValueError:
-            print(url, obj["annotation"])
+            print(url, img_dir)
 
 for label in set(labels):
     f_label.write(label)
