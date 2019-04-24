@@ -97,7 +97,7 @@ brand_list = ["Apple", "Kingston", "Adidas", "LEGO", "Calvin Klein",
 for i, obj in enumerate(collection.find()):
     if obj["annotation"] and (obj["class_name"].strip() in brand_list):
         try:
-            if "jpg" not in obj["image_url"] or "png" not in obj["image_url"]:
+            if "jpg" not in obj["image_url"] and "png" not in obj["image_url"]:
                 continue
 
             brand_images_count.setdefault(obj["class_name"], 0)
