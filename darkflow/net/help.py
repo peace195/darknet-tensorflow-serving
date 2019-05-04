@@ -16,7 +16,8 @@ def build_train_op(self):
     self.say('Building {} train op'.format(self.meta['model']))
     optimizer = self._TRAINER[self.FLAGS.trainer](self.FLAGS.lr)
     gradients = optimizer.compute_gradients(self.framework.loss)
-    self.train_op = optimizer.apply_gradients(gradients)
+    clipped_gradients = [(tf.clip_by_value(grad, -1., 1.), var) for grad, var in gradients]
+    self.train_op = optimizer.apply_gradients(clipped_gradients)
 
 def load_from_ckpt(self):
     if self.FLAGS.load < 0: # load lastest ckpt
