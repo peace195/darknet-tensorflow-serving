@@ -79,7 +79,7 @@ def train(self):
 
         if not ckpt:
             predict(self)
-            mAP = evaluate(self, self.FLAGS.imgdir, os.path.join(self.FLAGS.imgdir, 'out'), "results_" + str(ckpt) + ".txt")
+            mAP = evaluate(self, self.FLAGS.imgdir, os.path.join(self.FLAGS.imgdir, 'out'), "results_" + str(step_now) + ".txt")
             if mAP > best_mAP:
                 best_mAP = mAP
                 _save_ckpt(self, *args)
